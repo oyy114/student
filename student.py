@@ -2,8 +2,8 @@ import json
 import time
 str_info = """
 **************************************************
-欢迎使用【学生信息管理系统】V2.0
-本项目已开源在github 地址: https://github.com/
+欢迎使用【学生信息管理系统】V1.98 (测试版)
+本项目已开源在github 地址: https://github.com/oyy114/student 欢迎star
 请选择你想要进行的操作
 1. 新建学生信息
 2. 显示全部信息
@@ -50,7 +50,7 @@ while True:
         time.sleep(3)
     elif action == '2':
         print('2. 显示全部信息')
-        print('姓名\t语文\t数学\t英语\t总分')
+        print('姓名\t\t语文\t    数学\t\t英语\t    总分')
 
         for stu in students:
             print(f'{stu["name"]}\t{stu["chinese"]}\t\t{stu["math"]}\t\t{stu["english"]}\t\t{stu["total"]}')
@@ -65,7 +65,7 @@ while True:
         for stu in students:
             # 如果满足条件, 就是查询到了
             if name == stu['name']:
-                print('姓名\t语文\t数学\t英语\t总分')
+                print('姓名\t\t语文\t    数学\t\t英语\t    总分')
                 print(
                     f'{stu["name"]}\t{stu["chinese"]}\t\t{stu["math"]}\t\t{stu["english"]}\t\t{stu["total"]}')
                 # 一旦查询到了就停止查询
